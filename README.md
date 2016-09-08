@@ -33,7 +33,7 @@ passport.use(new patreonStrategy({
     clientID: PATREON_CLIENT_ID,
     clientSecret: PATREON_CLIENT_SECRET,
     callbackURL: "http://127.0.0.1:3000/auth/patreon/callback",
-    scope: "user_read"
+    scope: "users"
   },
   function(accessToken, refreshToken, profile, done) {
     User.findOrCreate({ patreonId: profile.id }, function (err, user) {
@@ -57,13 +57,6 @@ app.get("/auth/patreon/callback", passport.authenticate("patreon", { failureRedi
     // Successful authentication, redirect home.
     res.redirect("/");
 });
-```
-
-Optionally, the `forceVerify` option can be set to `true` to indicate
-that the user should be re-prompted for authorization:
-
-```javascript
-app.get("/auth/patreon", passport.authenticate("patreon", {forceVerify: true}));
 ```
 
 ## Example
@@ -92,7 +85,7 @@ passport.use(new patreonStrategy({
     clientID: "098f6bcd4621d373cade4e832627b4f6",
     clientSecret: "4eb20288afaed97e82bde371260db8d8",
     callbackURL: "http://127.0.0.1:3000/auth/patreon/callback",
-    scope: "user_read"
+    scope: "users"
   },
   function(accessToken, refreshToken, profile, done) {
     // Suppose we are using mongo..
