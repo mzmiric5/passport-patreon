@@ -1,0 +1,34 @@
+{
+  "name": "passport-patreon",
+  "version": "1.0.0",
+  "description": "Patreon (OAuth) authentication strategies for Passport.",
+  "main": "./lib/passport-patreon",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mzmiric5/passport-patreon.git"
+  },
+  "keywords": [
+    "passport",
+    "patreon",
+    "auth",
+    "authn",
+    "authentication",
+    "identiy",
+    "oauth",
+    "oauth2",
+    "strategy"
+  ],
+  "author": "Miso (Mike)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mzmiric5/passport-patreon/issues"
+  },
+  "homepage": "https://github.com/mzmiric5/passport-patreon#readme",
+  "dependencies": {
+    "passport-oauth2": "^1.3.0",
+    "pkginfo": "^0.4.0"
+  }
+}
